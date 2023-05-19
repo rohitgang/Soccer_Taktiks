@@ -10,11 +10,11 @@ So I propose a neural network solution called Player Neural Agent.
 
 A Player Neural Agent is a neural network which ingests attributes of a player's physicality and movement to then predict the next action. This may be achieved by 
 
-(1) Obtaining a minute's footage of a player in motion
+1. Obtaining a minute's footage of a player in motion
 
-(2) Create a batch of frames from the video of the player, eg. 1 frame/second
+2. Create a batch of frames from the video of the player, eg. 1 frame/second
 
-(3) Creating an algorithm which can generate features based off of the frames. Features like :
+3. Creating an algorithm which can generate features based off of the frames. Features like :
 
     (a) Relative position of elbow to the shoulder
 	
@@ -24,9 +24,9 @@ A Player Neural Agent is a neural network which ingests attributes of a player's
 
     (d) Relative position of the knee to the ankle
 
-(4) After we are able to generate such and many more features for each frame, we need to build markov chains over a specific time window (10 seconds, 20 seconds) so that we are able to capture the transition of posture and body language triggered by an event. For example, player A is dribblng with the ball and he suddenly slows down the ball with the sole plate of his cleats (change in posture and body language) because an opposition player is stepping upto him (event).
+4. After we are able to generate such and many more features for each frame, we need to build markov chains over a specific time window (10 seconds, 20 seconds) so that we are able to capture the transition of posture and body language triggered by an event. For example, player A is dribblng with the ball and he suddenly slows down the ball with the sole plate of his cleats (change in posture and body language) because an opposition player is stepping upto him (event).
 
-(5) Our target is to learn how a player moves his/her body when responding to change in the game state.
+5. Our target is to learn how a player moves his/her body when responding to change in the game state.
 
 Given a set of attributes describing the posture, structure and body language of a player and the presence of stimuli at time t, a Player Neural Agent must be able to predict the set of attributes describing the posture, structure and body language of a player at time t+1.
 
